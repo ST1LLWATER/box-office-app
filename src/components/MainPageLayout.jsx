@@ -8,7 +8,7 @@ function MainPageLayout({ children }) {
       <Nav />
       <Title
         title="Box Office"
-        subtitle="Are You Looking For A Movie Or An Actor?"
+        subtitle="Are You Looking For Series Or An Actor?"
       />
       {children}
     </div>
