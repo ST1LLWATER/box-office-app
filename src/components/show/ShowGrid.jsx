@@ -6,7 +6,7 @@ import ShowCard from './ShowCard';
 
 function ShowGrid({ data }) {
   return (
-    <div>
+    <FlexGrid>
       {/* <img src={IMG_NOT_FOUND} alt="image_not_found" /> */}
       {data.map(({ show }) => {
         return (
@@ -19,7 +19,7 @@ function ShowGrid({ data }) {
           />
         );
       })}
-    </div>
+    </FlexGrid>
   );
 }
 
