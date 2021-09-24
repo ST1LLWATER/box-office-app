@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ActorGrid from '../components/actor/ActorGrid';
 import MainPageLayout from '../components/MainPageLayout';
 import ShowGrid from '../components/show/ShowGrid';
@@ -10,10 +10,6 @@ function Home() {
   const [searchOption, setSearchOption] = useState('shows');
 
   const isShowsSearch = searchOption === 'shows';
-
-  useEffect(() => {
-    console.log('GG');
-  }, [input]);
 
   const onInputChange = e => {
     setInput(e.target.value);

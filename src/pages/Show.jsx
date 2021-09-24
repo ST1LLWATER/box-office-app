@@ -59,7 +59,13 @@ function Show() {
   }, [id]);
 
   if (isLoading) {
-    return <div>Date Is Loading</div>;
+    return (
+      <div>
+        <center>
+          <h2>Loading...</h2>
+        </center>
+      </div>
+    );
   }
 
   if (error) {
