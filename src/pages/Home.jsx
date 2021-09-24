@@ -42,7 +42,6 @@ function Home() {
 
     return null;
   }
-  console.log(searchOption);
 
   function onRadioChange(e) {
     setSearchOption(e.target.value);
