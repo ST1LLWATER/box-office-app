@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import ActorGrid from '../components/actor/ActorGrid';
 import CustomRadio from '../components/CustomRadio';
 import MainPageLayout from '../components/MainPageLayout';
@@ -50,9 +50,9 @@ function Home() {
     return null;
   }
 
-  function onRadioChange(e) {
+  const onRadioChange = useCallback(e => {
     setSearchOption(e.target.value);
-  }
+  }, []);
 
   return (
     <>
