@@ -61,6 +61,7 @@ function Home() {
           type="text"
           placeholder="Search For Something"
           onChange={onInputChange}
+          // eslint-disable-next-line
           onKeyDown={onKeyDown}
           value={input}
         />
