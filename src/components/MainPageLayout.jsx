@@ -5,11 +5,11 @@ import Title from './Title';
 function MainPageLayout({ children }) {
   return (
     <div>
-      <Nav />
       <Title
         title="Box Office"
         subtitle="Are You Looking For Series Or An Actor?"
       />
+      <Nav />
       {children}
     </div>
   );
