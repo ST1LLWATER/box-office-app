@@ -44,8 +44,9 @@ const RadioWrapper = styled.label`
   }
 
   span:after {
-    top: 4px;
-    left: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 8px;
     height: 8px;
     border-radius: 50%;
