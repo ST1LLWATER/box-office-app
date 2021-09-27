@@ -11,6 +11,22 @@ import {
   SearchButtonWrapper,
 } from './Home.styled';
 
+function renderResults(results) {
+  if (results && results.length === 0) {
+    return <div>No Results</div>;
+  }
+
+  if (results && results.length > 0) {
+    return results[0].show ? (
+      <ShowGrid data={results} />
+    ) : (
+      <ActorGrid data={results} />
+    );
+  }
+
+  return null;
+}
+
 function Home() {
   const [input, setInput] = useLastQuery();
   const [results, setResults] = useState(null);
@@ -32,22 +48,6 @@ function Home() {
       onSearch();
       setInput('');
     }
-  }
-
-  function renderResults() {
-    if (results && results.length === 0) {
-      return <div>No Results</div>;
-    }
-
-    if (results && results.length > 0) {
-      return results[0].show ? (
-        <ShowGrid data={results} />
-      ) : (
-        <ActorGrid data={results} />
-      );
-    }
-
-    return null;
   }
 
   const onRadioChange = useCallback(e => {
@@ -91,7 +91,7 @@ function Home() {
             Search
           </button>
         </SearchButtonWrapper>
-        {renderResults()}
+        {renderResults(results)}
       </MainPageLayout>
     </>
   );

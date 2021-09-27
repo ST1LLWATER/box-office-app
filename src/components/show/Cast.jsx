@@ -4,7 +4,6 @@ import IMG_PLACEHOLDER from '../../images/not-found.png';
 import { CastList } from './Cast.styled';
 
 const Cast = ({ cast }) => {
-  console.log(cast);
   return (
     <CastList>
       {cast.map(({ person, character, voice }, key) => (
