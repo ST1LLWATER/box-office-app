@@ -6,7 +6,7 @@ function MainPageLayout({ children }) {
   return (
     <div>
       <Title
-        title="Box Office"
+        title="Show Biz"
         subtitle="Are You Looking For Series Or An Actor?"
       />
       <Nav />
